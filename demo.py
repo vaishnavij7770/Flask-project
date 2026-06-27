@@ -13,7 +13,7 @@ def about():
 
 @app.route("/gallery")
 def gallery():
-    return "gallery"
+    return "<h1>gallery</h1>"
 
 if __name__=="__main__":
     app.run(debug=True,port=1234)
