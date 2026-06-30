@@ -1,11 +1,10 @@
-from flask import Flask
-
+from flask import *
 app=Flask(__name__)   #demo.py
 
 
 @app.route("/")
 def home():
-    return "Hello Flask"
+    return render_template("home.html")
 
 @app.route("/about")
 def about():
@@ -13,7 +12,7 @@ def about():
 
 @app.route("/gallery")
 def gallery():
-    return "<h1>gallery</h1>"
+    return render_template("gallery.html")
 
 if __name__=="__main__":
     app.run(debug=True,port=1234)
