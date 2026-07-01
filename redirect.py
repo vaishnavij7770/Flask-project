@@ -3,15 +3,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'Home Page'
+    return render_template('home.html')
 
 @app.route('/about')
 def about():
-    return redirect(url_for('contact'))
+    return render_template('about.html')
 
 @app.route('/contact')
 def contact():
-    return 'Contact Page'
+    return redirect(url_for('home'))
 
 
 
