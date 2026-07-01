@@ -8,5 +8,13 @@
 <body>
     {% include 'nav.html' %}
     <h1>This is flask home page</h1>
+
+    <p>Number: {{num1}}</p>
+
+    {%if num1%2==0:%}
+        <p>The number is even.</p>
+    {%else:%}
+        <p>The number is odd.</p>
+    {%endif%}
 </body>
 </html>

@@ -13,7 +13,10 @@ def about():
 def contact():
     return redirect(url_for('home'))
 
-
+@app.route('/logic')
+def logic():
+    num=23
+    return render_template('home.html',num1=num)
 
 if __name__ == '__main__':
     app.run(debug=True,port=2000)
